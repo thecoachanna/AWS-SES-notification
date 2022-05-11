@@ -10,7 +10,7 @@ Full details can be found in Blog Posts Referance.
 
 | Blog Post  
 | -----------------
-| [How To Send Transactional Emails Using Lambda and Amazon SES](https://www.prplbx.com/resources/blog/)
+| [How To Send Transactional Emails Using Lambda and Amazon SES](https://www.prplbx.com/resources/blog/transactional-emails-using-lambda-and-amazon-ses)
 
 ## Tech Stack
 
@@ -59,7 +59,7 @@ Initialize AWS Environment
 
 Follow instructions on blog post
 
-| [How To Send Transactional Emails Using Lambda and Amazon SES](https://www.prplbx.com/resources/blog/)
+| [How To Send Transactional Emails Using Lambda and Amazon SES](https://www.prplbx.com/resources/blog/transactional-emails-using-lambda-and-amazon-ses)
 
 Start the server
 

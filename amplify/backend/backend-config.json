@@ -1,35 +1,61 @@
 {
   "api": {
     "sesnotificationworks": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "output": {
         "authConfig": {
+          "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 7
-            }
-          },
-          "additionalAuthenticationProviders": []
+            },
+            "authenticationType": "API_KEY"
+          }
         }
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
     }
   },
   "function": {
-    "sesnotificationworks54149182": {
+    "sesnotification": {
       "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda",
       "dependsOn": [
         {
-          "category": "api",
-          "resourceName": "sesnotificationworks",
           "attributes": [
             "GraphQLAPIIdOutput",
             "GraphQLAPIEndpointOutput"
-          ]
+          ],
+          "category": "api",
+          "resourceName": "sesnotificationworks"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_sesnotification_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesnotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesnotification_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesnotification"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesnotification_sesEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesnotification"
         }
       ]
     }
